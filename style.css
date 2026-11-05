@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f1e8;
+    color: #292929;
+    line-height: 1.6;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    transition: .25s;
+}
+
+button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: .55;
+    transform: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* HEADER */
+
+.header {
+    background: #941c16;
+    color: white;
+    min-height: 75px;
+    padding: 15px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 3px 12px #0003;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffd45e;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd45e;
+}
+
+/* TRANG CHỦ */
+
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(30,10,5,.60),
+            rgba(30,10,5,.70)
+        ),
+        url("images/nen_lich_su.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.subtitle {
+    color: #ffd45e;
+    letter-spacing: 4px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(35px,7vw,65px);
+    margin: 15px 0;
+    color: #ffd45e;
+    text-shadow: 2px 3px 8px #000;
+}
+
+.hero h2 {
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.main-btn {
+    padding: 15px 35px;
+    background: #ffd45e;
+    color: #74150e;
+    border: none;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #0004;
+}
+
+.main-btn:hover {
+    background: #ffe18c;
+    transform: translateY(-4px) scale(1.04);
+}
+
+/* TRÒ CHƠI */
+
+.games-section {
+    padding: 70px 7%;
+    text-align: center;
+    background: #f5f1e8;
+}
+
+.section-title {
+    color: #951c17;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    margin: 12px 0 40px;
+    color: #666;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
+}
+
+.game-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #0002;
+    border-bottom: 4px solid #b92720;
+    transition: .3s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px #0003;
+}
+
+.game-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.game-card h3 {
+    color: #971d17;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.game-card p {
+    min-height: 75px;
+    color: #666;
+}
+
+.game-card span {
+    display: block;
+    color: #a27a25;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.game-card button,
+#game-content button {
+    background: #a51e18;
+    color: white;
+    border: none;
+    padding: 11px 22px;
+    border-radius: 7px;
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.game-card button:hover,
+#game-content button:hover:not(:disabled) {
+    background: #c52b22;
+}
+
+/* MÀN HÌNH TRÒ CHƠI RIÊNG */
+
+.game-area {
+    min-height: 100vh;
+    padding: 35px 15px 60px;
+    background: #eae2d3;
+}
+
+.game-panel {
+    max-width: 1000px;
+    min-height: 550px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #0002;
+    text-align: center;
+}
+
+.back-btn {
+    display: block;
+    background: #555 !important;
+    color: white;
+    padding: 10px 16px !important;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 25px !important;
+}
+
+.back-btn:hover {
+    background: #333 !important;
+}
+
+#game-content h2 {
+    color: #971d17;
+    margin: 15px 0;
+}
+
+#game-content p {
+    margin: 10px 0;
+}
+
+.question {
+    background: #fff4db;
+    border-left: 5px solid #d7a32d;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.answer-list {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+}
+
+.answer-list button {
+    background: #f0e5d3 !important;
+    color: #333 !important;
+    border: 1px solid #d5b98d !important;
+    min-height: 55px;
+}
+
+.answer-list button:hover:not(:disabled) {
+    background: #f9d987 !important;
+}
+
+.result {
+    margin: 20px 0;
+    font-weight: bold;
+    color: #176c36;
+    line-height: 1.7;
+}
+
+#game-content input {
+    font-size: 16px;
+    outline-color: #a51e18;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* SẮP XẾP THỜI GIAN */
+
+.timeline-item {
+    padding: 14px;
+    margin: 10px auto;
+    background: #f2e6d5;
+    max-width: 700px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.timeline-item span {
+    flex: 1;
+}
+
+.timeline-item button {
+    min-width: 38px;
+    padding: 8px !important;
+    margin: 2px !important;
+}
+
+/* BẢN ĐỒ LỊCH SỬ - ẢNH THẬT */
+
+.history-map-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #fff4df;
+    border-radius: 14px;
+    border: 1px solid #dfc99f;
+}
+
+.history-map-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    line-height: 0;
+}
+
+.history-map-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.history-map-marker {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: #b51e19;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 7px #0008;
+    padding: 0 !important;
+    margin: 0 !important;
+    z-index: 2;
+    line-height: 1;
+}
+
+.history-map-marker.done {
+    background: #16864c;
+}
+
+.history-map-marker:hover:not(:disabled) {
+    transform: translate(-50%,-50%) scale(1.3);
+    background: #e4a526;
+}
+
+.map-place-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.map-place-list button {
+    width: 100%;
+    margin: 0 !important;
+    text-align: left;
+}
+
+.map-place-list button:disabled {
+    background: #198754 !important;
+}
+
+/* THƯ VIỆN NHÂN VẬT */
+
+#history-character-library,
+#vietnam-map-explorer {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px 18px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px #0002;
+}
+
+#history-character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 14px;
+}
+
+#history-character-grid button {
+    padding: 16px;
+    border: 1px solid #ead9c9;
+    border-radius: 12px;
+    background: #fff8f0;
+    cursor: pointer;
+    text-align: left;
+    color: #333;
+}
+
+#history-character-detail article {
+    padding: 22px;
+    background: #f5f8f4;
+    border-left: 5px solid #b28a32;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+/* BẢN ĐỒ KHÁM PHÁ */
+
+.explorer-layout {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(260px,.85fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.explorer-map {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff4df;
+}
+
+.explorer-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.explorer-dot {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: #b21f1a;
+    box-shadow: 0 1px 5px #0008;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.explorer-dot.active {
+    background: #f0a51c;
+    transform: translate(-50%,-50%) scale(1.5);
+}
+
+#vietnam-explore-list {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 8px;
+    margin-top: 12px;
+}
+
+#vietnam-explore-list button {
+    padding: 10px 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #a91f19;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 !important;
+}
+
+#vietnam-explore-detail {
+    background: #f4f8f5;
+    border-radius: 12px;
+    padding: 18px;
+    line-height: 1.7;
+}
+
+/* GIỚI THIỆU */
+
+.about-section {
+    padding: 60px 10%;
+    text-align: center;
+    background: white;
+}
+
+.about-section h2 {
+    color: #971d17;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 750px;
+    margin: 12px auto;
+}
+
+.slogan {
+    color: #a51e18;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #65110e;
+    color: white;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ÂM THANH */
+
+#history-sound-toggle {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    padding: 10px 13px;
+    border: 0;
+    border-radius: 25px;
+    background: #a91f19;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 12px #0003;
+}
+
+/* HIỆU ỨNG */
+
+#game-content .question,
+#game-content .result {
+    animation: historyFade .3s ease;
+}
+
+@keyframes historyFade {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:650px) {
+    .header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .games-section {
+        padding: 45px 5%;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+
+    .game-panel {
+        padding: 15px;
+    }
+
+    .answer-list {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        font-size: 13px;
+    }
+
+    .about-section {
+        padding: 40px 7%;
+    }
+
+    .explorer-layout {
+        grid-template-columns: 1fr;
+    }
+
+    #history-character-library,
+    #vietnam-map-explorer {
+        margin: 20px 10px;
+    }
+}

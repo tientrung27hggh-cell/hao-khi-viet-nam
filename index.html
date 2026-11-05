@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hào Khí Việt Nam - Game lịch sử</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="main-header">
+    <div class="logo">🇻🇳 HÀO KHÍ VIỆT NAM</div>
+    <nav>
+        <a href="#home">Trang chủ</a>
+        <a href="#games">Trò chơi</a>
+        <a href="#about">Giới thiệu</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div class="hero-content">
+        <p class="subtitle">TÌM HIỂU LỊCH SỬ DÂN TỘC</p>
+        <h1>HÀO KHÍ VIỆT NAM</h1>
+        <h2>Khám phá lịch sử - Tự hào dân tộc</h2>
+        <p>
+            Hành trình tìm hiểu lịch sử Việt Nam,
+            Chủ tịch Hồ Chí Minh và những sự kiện đáng nhớ.
+        </p>
+        <button class="main-btn" onclick="goToGames()">
+            KHÁM PHÁ NGAY
+        </button>
+    </div>
+</section>
+
+<section id="games" class="games-section">
+    <h2 class="section-title">🎮 KHO TRÒ CHƠI LỊCH SỬ</h2>
+    <p class="section-desc">
+        Chọn một trò chơi để bắt đầu hành trình khám phá.
+    </p>
+
+    <div class="game-grid">
+
+        <div class="game-card">
+            <div class="game-icon">📚</div>
+            <h3>Trắc nghiệm lịch sử</h3>
+            <p>Trả lời các câu hỏi về Bác Hồ và lịch sử Việt Nam.</p>
+            <span>20 câu hỏi</span>
+            <button onclick="startGame('quiz')">Chơi ngay</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">⏳</div>
+            <h3>Sắp xếp thời gian</h3>
+            <p>Sắp xếp các sự kiện theo đúng trình tự lịch sử.</p>
+            <span>10 sự kiện - 2 độ khó</span>
+            <button onclick="startGame('timeline')">Chơi ngay</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🔍</div>
+            <h3>Giải mã lịch sử</h3>
+            <p>Đọc gợi ý và tìm ra nhân vật, địa danh lịch sử.</p>
+            <span>15 câu đố</span>
+            <button onclick="startGame('riddle')">Chơi ngay</button>
+        </div>
+
+        <div class="game-card">
+            <div class="game-icon">🗺️</div>
+            <h3>Bản đồ lịch sử Việt Nam</h3>
+            <p>Khám phá các địa danh và sự kiện lịch sử gắn liền.</p>
+            <span>10 địa danh</span>
+            <button onclick="startGame('map')">Chơi ngay</button>
+        </div>
+
+    </div>
+</section>
+
+<section id="game-area" class="game-area hidden">
+    <div class="game-panel">
+        <button class="back-btn" onclick="goHome()">
+            ← Về trang chủ
+        </button>
+        <div id="game-content"></div>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <h2>VỀ WEBSITE</h2>
+    <p>
+        Hào Khí Việt Nam là website trò chơi giáo dục,
+        giúp người chơi tìm hiểu lịch sử dân tộc,
+        các nhân vật lịch sử và những sự kiện quan trọng
+        thông qua hình thức giải trí.
+    </p>
+    <p class="slogan">
+        🇻🇳 Học lịch sử - Nhớ cội nguồn - Tự hào Việt Nam 🇻🇳
+    </p>
+</section>
+
+<footer id="main-footer">
+    <p>© 2026 HÀO KHÍ VIỆT NAM</p>
+    <p>Website trò chơi tìm hiểu lịch sử Việt Nam</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
