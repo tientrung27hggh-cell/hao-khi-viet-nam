@@ -600,7 +600,7 @@ function nextRiddle() {
 // SU DUNG ANH BAN DO MOI
 // =============================================
 
-const HISTORY_MAP_IMAGE = "images/ban-do-viet-nam.jpg";
+const HISTORY_MAP_IMAGE = "ban-do-viet-nam.jpg";
 
 function showMapGame() {
     if (mapCompleted.length===mapPlaces.length) {
